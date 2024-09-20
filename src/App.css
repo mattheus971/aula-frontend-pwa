@@ -1,0 +1,19 @@
+header {
+  background-color: rgb(73, 73, 73);
+  grid-area: cabecalho;
+}
+
+aside {
+  background-color: rgb(131, 131, 131);
+  grid-area: lado-esquerdo;
+}
+
+main {
+  background-color: rgb(215, 215, 215);
+  grid-area: principal;
+}
+
+footer {
+  background-color: rgb(56, 56, 56);
+  grid-area: rodape;
+}

@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: grid;
+  grid-template-areas:
+    'cabecalho cabecalho'
+    'lado-esquerdo principal'
+    'rodape rodape';
+
+  grid-template-rows: 128px 1fr 128px;
+  grid-template-columns: 256px 1fr;
+}
+
