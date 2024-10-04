@@ -11,11 +11,31 @@ body,
 #root {
   display: grid;
   grid-template-areas:
-    'cabecalho cabecalho'
-    'lado-esquerdo principal'
-    'rodape rodape';
+    'cabecalho'
+    'principal'
+    'rodape';
 
-  grid-template-rows: 128px 1fr 128px;
-  grid-template-columns: 256px 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
+:root {
+  --cor-primaria-clara: #6e6e6e;
+  --cor-primaria: #535353;
+  --cor-primaria-escura: #303f9f;
+
+  --cor-secundaria-clara: #ffab40;
+  --cor-secundaria: #ff9100;
+  --cor-secundaria-escura: #ff6d00;
+
+  --cor-fundo-padrao: #f7f7f7;
+
+  --cor-texto-padrao: #1c2025;
+  --cor-texto-claro: #fff;
+
+  --cor-info: #0288d1;
+  --cor-sucesso: #1aa251;
+  --cor-aviso: #dea500;
+  --cor-erro: #eb0014;
+
+  --cor-cinza: #99a7bb;
+}

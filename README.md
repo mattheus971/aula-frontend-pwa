@@ -1,8 +1,30 @@
-# React + Vite
+## Rodando localmente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Clone o projeto:
 
-Currently, two official plugins are available:
+```bash
+  git clone https://github.com/thiagocordeirooo/aulas-frontend-senai.git
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Entre no diretório do projeto:
+
+```bash
+  cd aulas-frontend-senai
+```
+
+Instale as dependências:
+
+```bash
+  npm install
+
+  ou 
+
+  npm i
+```
+
+Inicie o servidor localmente:
+
+```bash
+  npm run dev
+```
+
