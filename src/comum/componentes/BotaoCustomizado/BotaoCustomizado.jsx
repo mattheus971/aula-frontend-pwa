@@ -1,7 +1,6 @@
-const Botao = (props) => {
+const BotaoCustomizado = (props) => {
 
-    return <button>{props.children}</button>
+    return <button onClick={props.aoClicar}>{props.children}</button>
 };
-
 
 export default BotaoCustomizado;
