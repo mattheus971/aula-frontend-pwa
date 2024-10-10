@@ -1,13 +1,11 @@
-import BotaoCustomizado from "../BotaoCustomizado/BotaoCustomizado";
 import "./Principal.css";
 
-function Principal() {
+function Principal({ titulo, children }) {
   return (
     <main className="principal_root">
-      Principal
-      <BotaoCustomizado cor="primaria" aoClicar={() => alert('Funcionou!')}>Botão Primário</BotaoCustomizado>
-      <BotaoCustomizado cor="secundaria" aoClicar={() => alert('Funcionou!')}>Botão Secundário</BotaoCustomizado>
-      <BotaoCustomizado cor="padrao" aoClicar={() => alert('Funcionou!')}>Botão Padrão</BotaoCustomizado>
+      <h1>{titulo}</h1>
+
+      {children}
     </main>
   );
 }
