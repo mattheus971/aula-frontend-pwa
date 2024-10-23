@@ -10,6 +10,7 @@ import BotaoContador from './paginas/BotaoContador/BotaoContador';
 import ListaProdutos from './paginas/ListaProdutos/ListaProdutos';
 import PaginaInicial from './paginas/PaginaInicial/PaginaInicial';
 import PaginaListaTarefas from './paginas/PaginaListaTarefas/PaginaListaTarefas';
+import PaginaDesafioComponentes from './paginas/PaginaDesafioComponentes/PaginaDesafioComponentes';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: 'lista-tarefas',
     element: <PaginaListaTarefas />,
+  },
+  {
+    path: 'desafio-componentes',
+    element: <PaginaDesafioComponentes />,
   },
 ]);
 
