@@ -11,7 +11,7 @@ import ListaProdutos from './paginas/ListaProdutos/ListaProdutos';
 import PaginaInicial from './paginas/PaginaInicial/PaginaInicial';
 import PaginaListaTarefas from './paginas/PaginaListaTarefas/PaginaListaTarefas';
 import PaginaListaClientes from './paginas/PaginaListaClientes/PaginaListaClientes';
-import PaginaCadastroClientes from './paginas/PaginaCadastroClientes/PaginaCadastroClientes';
+import PaginaCadastroCliente from './paginas/PaginaCadastroCliente/PaginaCadastroCliente';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: 'cadastro-cliente',
-    element: <PaginaCadastroClientes />,
+    element: <PaginaCadastroCliente />,
   },
 ]);
 
