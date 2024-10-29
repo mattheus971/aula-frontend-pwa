@@ -19,11 +19,22 @@ const PaginaListaTarefas = () => {
     setDescricao('');
     document.getElementById('campoDescricao').focus();
   };
+
   const removerDaLista = (index) => {
-    if (confirm('Tem certeza?')) {
+    if (
+      confirm(
+        `Tem certeza que deseja excluir: ${tarefas[index].descricao}`
+      )
+    ) {
+      if (tarefas[index].feita) {
+        tarefas.splice(index, 1);
+        setTarefas([...tarefas]);
+      } else {
+        alert(
+          'A tarefa precisa estar concluída para ser excluida'
+        );
+      }
     }
-    tarefas.splice(index, 1);
-    setTarefas([...tarefas]);
   };
 
   const marcarComoFeita = (index) => {
@@ -41,7 +52,7 @@ const PaginaListaTarefas = () => {
       titulo={`Lista de Tarefas (${tarefas.length})`}
       voltarPara="/"
     >
-      <div>
+      <div className="pagina-lista-tarefas_campo-descricao">
         <input
           id="campoDescricao"
           type="text"
@@ -54,31 +65,45 @@ const PaginaListaTarefas = () => {
             }
           }}
         />
-        <BotaoCustomizado aoClicar={adicionarNaLista}>
+        <BotaoCustomizado
+          cor="secundaria"
+          aoClicar={adicionarNaLista}
+        >
           +
         </BotaoCustomizado>
       </div>
-      <ul>
-        {tarefas.map((item, index) => {
-          return (
-            <li key={index}>
-              <input
-                type="checkbox"
-                checked={item.feita}
-                onChange={() => marcarComoFeita(index)}
-              />
+      {tarefas.map((item, index) => {
+        return (
+          <div
+            key={index}
+            className="pagina-lista-tarefas_item"
+          >
+            <input
+              type="checkbox"
+              checked={item.feita}
+              onChange={() => marcarComoFeita(index)}
+            />
+            <span
+              style={{
+                textDecoration: item.feita
+                  ? 'line-through'
+                  : 'none',
+              }}
+            >
               {item.descricao}
-              <FaTrashCan
-                color="red"
-                onClick={() => removerDaLista(index)}
-              />
-            </li>
-          );
-        })}
-      </ul>
+            </span>
+            <FaTrashCan
+              color="red"
+              onClick={() => removerDaLista(index)}
+            />
+          </div>
+        );
+      })}
 
       {tarefas.length === 0 && (
-        <span>Não tem tarefa para listar</span>
+        <span className="pagina-lista-tarefas_mensagem-vazia">
+          Não tem tarefa para listar.
+        </span>
       )}
     </Principal>
   );
